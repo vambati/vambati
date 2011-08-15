@@ -1,0 +1,8 @@
+LM3GRAM	1.000000	taruDecoder.features.LMFeatureFunction
+TGSLEX	1.000000	taruDecoder.features.LexicalWeightFeatureFunction
+SGTLEX	1.000000	taruDecoder.features.LexicalWeightFeatureFunction
+TGS	1.000000	taruDecoder.features.RuleScoreFeatureFunction
+SGT	9.708098	taruDecoder.features.RuleScoreFeatureFunction
+RC	5.000000	taruDecoder.features.RuleScoreFeatureFunction
+LP	3.740327	taruDecoder.features.LengthPenaltyFeatureFunction
+WC	1.000000

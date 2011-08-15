@@ -1,0 +1,54 @@
+NumReferences         1
+
+#TraceLevel=n:
+#PreProcessingScript=s:
+#PostProcessingScript=s:
+NormalizingScript     /afs/cs/user/vogel/Release/OptimizeNBest/DoNothing.pl
+#NormalizingScript     /afs/cs/user/vogel/Release/OptimizeNBest/NormalizeTranslationsBLEU.pl
+
+IterationLimit      5 
+#ScoringMetric      TER
+ScoringMetric      IBMBLEU
+
+#Lexicon=s:
+#ReverseLexicon=s:
+#LexiconFormat=n:
+
+#LMFile=s:
+#LMType=s:
+#LMNgramLength=n:
+#LMInterpolationMode=c:
+#LMMaxFrequencyForDiscounting=n:
+
+#FertilityFE=s:
+#FertilityEF=s:
+
+#RescoreNBest=n:
+ScalingFactors     1.0_1.0_1.0_1.0_1.0_1.0_1.0_1.0
+#NBest=n:
+
+Opti_LeftRange     0_0_0_0_0_0_0_0
+Opti_RightRange=   +10.0_+10.0_+10.0_+10.0_+10.0_+10.0_+10.0_+10.0
+
+#MEROptimize        1
+#GainFile=s:
+#GenOracleScores    1
+
+# values how often to restart optimization after convergence
+Opti_NumStarts     1
+Opti_NumPermutes   3
+Opti_NumModify     2
+
+# run 2-stage optimization - nulling out certain fields and re-optimizing
+# don't use this option together with Opti_NumPermutes > 1
+# when using 2-stage optimization then Opti_NumModify gives the number of
+# model scores which is set to null in each trial
+Opti_TwoStage         0
+
+
+# Normalize scaling factors after each iteration
+Opti_DoNorm           0
+
+# optimization is considered to have converged if difference in metric score is 
+# smaller than this value 
+Opti_Epsilon       0.001

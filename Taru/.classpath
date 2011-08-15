@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/rulelearner/antlr.jar"/>
+	<classpathentry kind="lib" path="G:/workspace-eclipse/Taru/external/stanford-parser-2007-08-19.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
