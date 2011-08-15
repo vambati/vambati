@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Overview>
+    <FormattedContent><![CDATA[
+      <h1 align="center">Translate $src_lang to $tgt_lang </h1>
+      <h3>Instructions</h3>
+	<ul> 
+	<li>Your $tgt_lang translation should be as close as possible to the $src_lang original sentence</li>
+        <li> Any words that you do not understand should be copy pasted to the translation as it is, but do not drop any words</li>
+        <li> You can NOT use 'automatic' online Machine Translation systems like Google or Babblefish to do this task </li>
+	</ul>
+    ]]></FormattedContent>
+  </Overview>
+  <Question>
+    <QuestionIdentifier>translate</QuestionIdentifier>
+    <IsRequired>true</IsRequired>
+    <QuestionContent>
+      <FormattedContent><![CDATA[
+      <font size="4" color="darkblue" >Translate the following phrase: $phrase1 </font> 
+      ]]></FormattedContent>
+    </QuestionContent>
+    <AnswerSpecification>
+            <FreeTextAnswer>
+      	<NumberOfLinesSuggestion>1</NumberOfLinesSuggestion>
+      	</FreeTextAnswer>
+    </AnswerSpecification>
+  </Question>
+    <Question>
+    <QuestionIdentifier>translate</QuestionIdentifier>
+    <IsRequired>true</IsRequired>
+    <QuestionContent>
+      <FormattedContent><![CDATA[
+      <font size="4" color="darkblue" >Translate the following phrase: $phrase2 </font> 
+      ]]></FormattedContent>
+    </QuestionContent>
+    <AnswerSpecification>
+      <FreeTextAnswer>
+      	<NumberOfLinesSuggestion>1</NumberOfLinesSuggestion>
+      	</FreeTextAnswer>
+    </AnswerSpecification>
+  </Question>
+    <Question>
+    <QuestionIdentifier>translate</QuestionIdentifier>
+    <IsRequired>true</IsRequired>
+    <QuestionContent>
+      <FormattedContent><![CDATA[
+      <font size="4" color="darkblue" >Translate the following phrase: $phrase3 </font> 
+      ]]></FormattedContent>
+    </QuestionContent>
+    <AnswerSpecification>
+      <FreeTextAnswer>
+      	<NumberOfLinesSuggestion>1</NumberOfLinesSuggestion>
+      	</FreeTextAnswer>
+    </AnswerSpecification>
+  </Question>
+</QuestionForm>

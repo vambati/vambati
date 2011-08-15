@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="external/google-api-translate-java-0.82.jar"/>
+	<classpathentry kind="lib" path="external/meteor.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/java-aws-mturk.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/aws-mturk-dataschema.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/aws-mturk-wsdl.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/commons-collections-3.2/commons-collections-3.2.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/commons-lang-2.3/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/velocity-1.5/velocity-1.5.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/opencsv-1.8/opencsv-1.8.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/wsdl4j-1.5.1/wsdl4j.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/apache-log4j-1.2.15/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/commons-logging-1.0.4/commons-logging.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/xerces-2.9.1/xml-apis.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/axis-1.4/jaxrpc.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/axis-1.4/axis.jar"/>
+	<classpathentry kind="lib" path="external/java-aws-mturk-1.2.2/lib/third-party/axis-1.4/commons-discovery-0.2.jar"/>
+	<classpathentry kind="lib" path="external/weka.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

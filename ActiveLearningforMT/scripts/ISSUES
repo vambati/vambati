@@ -1,0 +1,21 @@
+Sentence Similarity 
+---------
+east asia
+south asia
+southern asia
+
+Do we need clustering ? with morph analysis and semantically close sens ? 
+
+Penalize 1-time occuring phrases .If they are more in the sentence, they are probably
+named entities 
+
+
+Diversity metric (uncertainity metric) provides ZERO values to a lot of sentences as they
+are not present in the initial set of sentences. 
+- How do we come up with an uncertainity metric (entropy based) that is relevant to MT
+and not a classification task style.. 
+- If the basics are right , active learning should work 
+
+
+What is the overlap between sentences in various scenarios 
+

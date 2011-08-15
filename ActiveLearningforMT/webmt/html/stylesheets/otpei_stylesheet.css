@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+
+body
+{ 
+	font:13px Arial,sans-serif; 
+}
+
+fieldset 
+{
+	position: relative;
+	border: 2px groove #CCCCCC;
+	margin: 0.5em;
+	padding: 0.5em;
+	left:21px;
+	width: 800px;
+}
+
+.draglist 
+{
+    position: relative;
+	height: 300px;
+    width: 500px;
+    border: 2px solid black;
+    background: #f7f7f7;
+    list-style: none;
+    margin:10px;
+    padding:0;
+}
+ 
+.editable {
+    background-color: #D1E6EC;
+    border:1px solid #7EA6B2;
+    font-weight:bold;
+    float: left;
+    margin: 5px;
+    cursor: move;
+    font-size:17px;
+}

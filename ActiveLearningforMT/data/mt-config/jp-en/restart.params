@@ -1,0 +1,30 @@
+SourceSentencesFile    /mnt/1tb/usr6/vamshi/ActiveLearning/Jp-En/dev.jp
+ReferencesFile	       /mnt/1tb/usr6/vamshi/ActiveLearning/Jp-En/dev.en
+
+NumReferences         1
+
+#TraceLevel=n:
+#PreProcessingScript=s:
+#PostProcessingScript=s:
+NormalizingScript     /mnt/1tb/usr6/vamshi/ActiveLearning/MT_more/optimizenbest/DoNothing.pl
+#NormalizingScript     /afs/cs/user/vogel/Release/OptimizeNBest/NormalizeTranslationsBLEU.pl
+
+IterationLimit      1
+ScoringMetric      IBMBLEU
+
+ScalingFactors	-0.240839_-1.998219_-0.180819_-3.476149_-2.804122_-1.414847_-3.283383_-0.874246_-0.058903_-0.409933_-0.300000_-0.862705_-2.821351_3.858662
+
+Opti_LeftRange    -10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0_-10.0
+Opti_RightRange   +0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+0.0_+10.0
+
+# values how often to restart optimization after convergence
+Opti_NumStarts     10
+Opti_NumPermutes   3
+Opti_NumModify     2
+
+# Normalize scaling factors after each iteration
+Opti_DoNorm           0
+
+# optimization is considered to have converged if difference in metric score is 
+# smaller than this value 
+Opti_Epsilon       0.001

@@ -1,0 +1,202 @@
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Moses Registeration</title>
+  <link rel="stylesheet" type="text/css" href="stylesheets/otpei_login.css"/>
+<script type="text/javascript">
+  function show_alert()
+  {
+	var rusername = document.getElementById('rusername');
+	var rpassword = document.getElementById('rpassword');
+	var repassword = document.getElementById('repassword');
+	submitOK="true";
+	/*var patt=new RegExp(".","g");
+	var flag1 = patt.test(rusername);
+	var flag2 = patt.test(rpassword);
+	var flag3 = patt.test(repassword);
+	if(flag1)
+	{
+		alert(". (dot) is not accepted in username/password");
+		submitOK="false";
+	}
+	if(flag2)
+	{
+		alert(". (dot) is not accepted in username/password");
+		submitOK="false";
+	}
+	if(flag3)
+	{
+		alert(". (dot) is not accepted in username/password");
+		submitOK="false";
+	}*/
+	if(rusername.value == "" || rpassword.value == "" || repassword.value == "")
+	{
+		alert("Please enter username/password");
+		submitOK="false";
+	}
+	if(rpassword.value != repassword.value)
+	{
+		alert("Please confirm your password");
+		submitOK="false";
+	}
+	if (submitOK=="false")
+	{
+		return false;
+	}
+  }
+  </script>
+</head>
+
+<body class="hostedlogin">
+<div id="main">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="header">
+<tr>
+<td><h1>Welcome to Moses Online Translate - IIIT Hyderabad</h1></td>
+</tr>
+</table>
+
+<table class="container" border="0" width="90%" cellpadding=1 cellspacing=1>
+  <tr>
+  <td valign="top" align="center">
+
+<form id="gaia_loginform" action="/cgi-bin/register.cgi" method="post" onsubmit="return show_alert()"> <!-- "return(cheking());"-->
+<div id="gaia_loginbox">
+<table class="form-noindent" cellspacing="3" cellpadding="5" width="100%" border="0">
+  <tr>
+  <td valign="top" style="text-align:center" nowrap="nowrap"
+        bgcolor="#ffeac0">
+  <div class="loginBox">
+  <table id="gaia_table" align="center" border="0" cellpadding="1" cellspacing="0">
+  <tr>
+<td class="smallfont" colspan="2" align="center">
+<b>Registration</b>
+</td>
+</tr>
+
+<tr>
+  <td colspan="2" align="center">
+  </td>
+</tr>
+<tr>
+  <td nowrap="nowrap">
+  <div align="right">
+  <span class="gaia le lbl">
+  Username:
+  </span>
+  </div>
+  </td>
+  <td>
+  <input type="text" name="rusername" id="rusername" size="18" class="gaia le val" />
+  </td>
+</tr>
+<tr>
+  <td></td>
+  <td align="right" style="color: #444444; font-size: 75%; overflow: hidden;"
+    dir="ltr">
+  
+  </td>
+
+  <td></td>
+</tr>
+<tr>
+  <td></td>
+  <td align="left">
+  </td>
+</tr>
+
+<tr>
+<td class="smallfont" colspan="2" align="left">
+  
+
+</td>
+</tr>
+<tr>
+  <td align="right">
+  <span class="gaia le lbl">
+  Password:
+  </span></td>
+  <td>
+  <input type="password" name="rpassword" id="rpassword" size="18" class="gaia le val" />
+  </td>
+</tr>
+<tr>
+<td class="smallfont" colspan="2" align="left">
+Retype
+</td>
+</tr>
+<tr>
+  <td align="right">
+  <span class="gaia le lbl">
+  Password:
+  </span></td>
+  <td>
+  <input type="password" name="repassword" id="repassword" size="18" class="gaia le val" />
+  </td>
+</tr>
+
+<tr>
+  <td>
+  </td>
+  <td align="left">
+  </td>
+</tr>
+
+<tr>
+  <td>
+  </td>
+  <td align="left">
+  <input type="submit" class="gaia le button" name="Register" value="Register"/>
+  </td>
+</tr>
+<tr id="ga-fprow">
+  <td colspan="2" height="100.0" class="gaia le fpwd"
+    align="center" valign="bottom">
+  </td>
+</tr>
+  </table>
+  </div>
+  </td>
+  </tr>
+</table>
+
+</div>
+
+</form>
+  </td>
+  <td class="smallfont" valign="top" width="100%">
+<br><br>
+<h2>
+  Access Moses Online Translate from anywhere.
+</h2>
+<p>
+  Welcome to Moses Online Translate with advanced Online Post Editor Interface
+</p>
+<ul>
+  <li>
+  You can translate any webpage from English to Hindi
+  </li>
+  <li>
+  You can enter your own English text and get Hindi translation
+  </li>
+  <li>
+  You can also contribute to the translation process using our advanced Online Post Editor Interface
+  </li>
+  <li>
+  You can also access your translation contributions/corrections whenever you want to
+  </li>
+</ul>
+</td>
+</tr>
+</table>
+  <div class="footer">
+  <a href="http://www.iiit.ac.in">IIIT Hyderabad</a>&nbsp;&nbsp;-&nbsp;&nbsp;
+  <a href="http://www.statmt.org/moses/">Moses Homepage</a>
+  <br>
+  <br>
+  &copy;2009 MSIT-IIIT Hyderabad
+  <div>
+</div>
+</body>
+</html>
+

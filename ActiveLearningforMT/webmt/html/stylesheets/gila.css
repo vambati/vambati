@@ -1,0 +1,449 @@
+/*
+#==============================================================================
+# gila.css
+#==============================================================================
+# Copyright (c) 2004, 2005 Thomas Weibel. All rights reserved.
+#
+# Defines the CSS for beeblebrox-gila.tmpl
+#
+# This file is part of the PmWiki beeblebrox gila skin; you can redistribute it
+# and/or modify it under the terms of the GNU General Public License as 
+# published by the Free Software Foundation; either version 2 of the License, 
+# or (at your option) any later version.
+#==============================================================================
+*/
+
+/* 
+#------------------------------------------------------------------------------
+# Common styles
+#------------------------------------------------------------------------------
+*/
+body {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  font-family: verdana, helvetica, arial, sans-serif;
+  font-size: 10pt;
+  margin: 0px;
+  padding: 0px;
+}
+
+acronym, abbr {
+  border-bottom: 1px dotted rgb(16,8,49);
+  cursor: help;
+  margin: 0;
+  padding: 0;
+}
+
+.smallCaps {
+  font-size: 117%;
+  font-variant: small-caps;
+}
+
+hr {
+  height: 1px;
+  color: black;
+}
+
+#center {
+  text-align: center;
+}
+
+code { 
+  color: rgb(115,0,0); 
+  font-size: 100%
+}
+
+dt { 
+  color: rgb(155,63,11); 
+}
+
+pre {
+  border: 2px dotted rgb(150,150,150); 
+  background: rgb(248,248,248);
+  padding: 10px;
+}
+
+div.markup { 
+  border: 2px dotted rgb(150,150,150); 
+  background: rgb(248,248,248);
+  margin-left: 30px; 
+  margin-right: 30px; 
+  padding-left: 10px; 
+  padding-right: 10px; 
+}
+
+div.markup pre { 
+  border: none;
+  border-bottom: 1px solid rgb(150,150,150); 
+  background: none;
+  padding: none;
+  padding-top: 10px; 
+  padding-bottom: 10px; 
+}
+
+p.right {
+  text-align: right;
+}
+
+p.center {
+  text-align: center;
+}
+
+td,th {
+  font-size: 10pt
+}
+
+
+
+
+
+/* 
+#------------------------------------------------------------------------------
+# Wiki diff
+#------------------------------------------------------------------------------
+*/
+.difftype {
+  clear: none;
+  font-family: verdana,sans-serif;
+  font-size: 66%;
+  font-weight: bold;
+}
+.diffrestore {
+  clear: none;
+  font-family: verdana,sans-serif;
+  font-size: 66%; 
+  margin: 1.5em 0px;
+}
+
+
+/* 
+#------------------------------------------------------------------------------
+# Wiki header
+#------------------------------------------------------------------------------
+*/
+#header {
+  color: black;
+  width: 12.5em;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-color: rgb(0,0,0); 
+}
+
+.headerTitle {
+  margin: 0;
+  padding: 0.25em 4mm 0.25em 4mm;
+}
+
+
+/* For fully standards-compliant user agents */
+.headerTitle > a {
+  font-size: 138%;
+}
+
+.headerTitle span {
+  color: black;
+  background-color: transparent;
+  font-weight: normal;
+}
+
+
+#headerSearch {
+  position: absolute;
+  right: 0.5em;
+  top: 1.0em;
+}
+
+
+/* This rule only rendered by CSS2-fully compliant browsers */
+#headerSearch [class~="text"] {  
+  height: 2.5ex;
+}
+
+/* 
+#------------------------------------------------------------------------------
+# Wiki navigation
+#------------------------------------------------------------------------------
+*/
+.wikileft {
+  width: 12.5em;
+  float: left;
+  clear: left;
+  border-right: 1px solid #FF9900;/* 1px solid rgb(206,206,214);*/
+}
+
+.wikileft .sidebar {
+  padding: 0.8ex 0.5ex;
+}
+
+
+.wikileft ul {
+  list-style-type: none;
+  list-style-position: outside;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+.wikileft li {
+  margin: 0.3ex 0 0 1ex;
+  padding: 0 0 0 0;
+}
+
+/*
+.wikileft a.selfreference {
+  font-weight: bold;
+}
+*/
+
+.wikileft a {
+  color: rgb(16,8,49);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.wikileft a:hover {
+  color: rgb(64,64,64);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.wikileft h2 {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+
+  /* For MSIE */
+  font-size: 110%;  
+  font-weight: bold;
+}
+.wikileft #tag {
+  color: black;
+  font-family: times;
+  font-variant: small-caps;
+  font-size: 140%;
+  padding: 0.25em 4mm 0.25em 4mm;
+}
+
+.wikileft #tag2 {
+  color: black;
+  font-family: sans-serif;
+  font-size: 80%;
+  font-weight: normal;
+  padding: 0 0 0 0;
+}
+.wikileft h1 { 
+  color: rgb(64,64,64);
+  background-color: #FFEAC0;/*rgb(206,206,214);*/
+  font-size: small; 
+  font-weight: bold;
+  margin: 0;
+  padding: 0.8ex 1ex;
+}
+
+.wikileft em strong {
+  color: rgb(16,8,49);
+  background-color: transparent;
+  line-height: 1.25em;
+  margin: 1ex 0.25ex 1.5em 0.75ex;
+  padding: 0;
+  display: block;
+  font-size: small;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wikileft strong, .wikileft p {
+  margin-left: 0.8ex;
+}
+
+.wikileft em strong a {
+  text-decoration: underline;
+}
+
+.wikileft em strong a:hover {
+  text-decoration: none;
+}
+
+.wikileft hr { 
+  color: rgb(206,206,214); 
+  height: 1px;
+}
+
+.wikileft table {
+  margin-left: 0.75ex;
+}
+
+.wikileft .wikisearch {
+  display: inline;
+}
+
+.wikileft .wikisearchbox {
+  font-size: 70%;
+  width: 10em;
+}
+
+.wikileft .wikisearchbutton {
+  /*display: none;*/
+}
+
+
+/* 
+#------------------------------------------------------------------------------
+# Wiki body
+#------------------------------------------------------------------------------
+*/
+#wikibody {
+  color: rgb(0,0,0);
+  background-color: rgb(255,255,255);
+  line-height: 1.5em;
+  margin: 0 0 0 12.5em;
+  padding: 0 0 0.25em 0;  
+  border-left: 1px solid #FF9900; /*1px solid rgb(206,206,214);*/
+}
+
+#wikibody #wikipage {
+  margin: 1.5em 2em 1.75em 2em;
+}
+
+#wikibody #breadcrumbs {  
+  vertical-align:top;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 85%;
+  padding: 0.25em 0.5em 0.25em 1.5em;
+}
+
+#wikibody #wikicmds {
+  float: right;
+  border-bottom: solid 1px rgb(221,221,221);
+  border-left: solid 1px rgb(221,221,221);
+  font-family: sans-serif;
+  font-size: 85%;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  color: rgb(153,153,153);
+}
+
+#wikibody #wikicmds a {
+  color: rgb(153,153,153); 
+  text-decoration: none;
+}
+
+#wikibody h1 {
+  color: rgb(16,8,49);
+  background-color: transparent;
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 150%;
+  text-align: left;
+  margin-top: 2ex;
+}
+
+#wikibody h2 {
+  color: rgb(16,8,49);
+  background-color: transparent;
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 130%;
+  text-align: left;
+  margin-top: 2ex;
+  margin-bottom: 0.5ex;
+}
+
+#wikibody h3 {
+  color: rgb(16,8,49);
+  background-color: transparent;
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 110%;
+  text-align: left;
+  margin-top: 2ex;
+  margin-bottom: 0.5ex;
+}
+
+#wikibody a {
+  color: rgb(16,8,49);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+#wikibody a:hover {
+  text-decoration: none;
+}
+
+#wikibody a.createlinktext { 
+  text-decoration: none; 
+  border-bottom: 1px dotted gray; 
+}
+
+#wikibody a.createlink { 
+  text-decoration: none; 
+  position: relative; 
+  top: -0.5em;
+  font-weight: bold; 
+  font-size: smaller; 
+  border-bottom: none; 
+}
+
+#wikibody .wikitrail {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* 
+#------------------------------------------------------------------------------
+# Wiki footer
+#------------------------------------------------------------------------------
+*/
+#wikifoot {
+  color: black;
+  background-color: #FFEAC0;/*rgb(206,206,214);*/
+  font-size: 92%;
+  text-align: center;
+  margin: 0;
+  padding: 0.8em 1em 0.8em 1em;
+  clear: both;
+}
+
+#wikifoot div {
+  margin: 0;
+  padding: 0 0 0 0;
+}
+
+#wikifoot a {
+  color: black;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#wikifoot a:hover {
+  text-decoration: none;
+}
+
+#wikifoot .footnav {
+  float: right;
+}
+
+#wikifoot .footnav a {
+  color: rgb(153,153,153);
+  text-decoration: none;
+}
+
+#wikifoot .footnav a:hover {
+  text-decoration: none;
+}
+
+.sites-teaser {
+  margin-top: 2em;
+  padding: .5em;
+  background-color: #ffffee;
+  border: 1px solid #eeee00;
+}
+
+.alert {
+  color: #FF0000
+}
+
+#wikifoot .lastmod {
+  float: left;
+}

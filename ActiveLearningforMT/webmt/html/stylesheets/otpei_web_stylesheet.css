@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+/*margin and padding on body element
+  can introduce errors in determining
+  element position and are not recommended;
+  we turn them off as a foundation for YUI
+  CSS treatments. */
+
+#mpanel.yui-panel .bd fieldset 
+{
+	position: relative;
+	border: 2px groove #CCCCCC;
+	margin: 0.5em;
+	padding: 0.5em;
+	left:21px;
+	width: 800px;
+}
+
+.draglist 
+{
+    position: relative;
+	height: 300px;
+    width: 500px;
+    border: 2px solid black;
+    background: #f7f7f7;
+    list-style: none;
+    margin:10px;
+    padding:0;
+}
+ 
+.editable {
+    background-color: #D1E6EC;
+    border:1px solid #7EA6B2;
+    font-weight:bold;
+    font-size:17px;
+    float: left;
+    margin: 5px;
+    cursor: move;
+}
+.otpei-text 
+{
+	display: none !important
+}
+.mask
+{
+	z-index:1;
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#000;opacity:.25;filter:alpha(opacity=25);
+}

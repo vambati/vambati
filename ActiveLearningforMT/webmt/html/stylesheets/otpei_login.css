@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  margin: 5px 15px 0px 15px;
+  font-family:arial,sans-serif;
+  background-color: #ffffff;
+  font-size: 80%;
+}
+
+table.header {
+  margin-bottom: 0.4em;
+}
+
+.smallfont {
+  font-size: 80%;
+  padding: 10px;
+}
+
+#gaia_loginbox {
+  margin-top: 0.5em;
+}
+
+#gaia_loginform {
+  margin: 0;
+}
+
+a:link, a:active, a:visited {
+  color:#0000CC
+}
+
+.form-noindent {
+  cell-padding:1px;
+  background-color: #ffeac0;
+  border: #ff9900 1px solid;
+}
+
+li {
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.header h1 {
+  border-bottom: solid 1px #bbbbbb;
+  padding-bottom: 5px;
+  margin: 0 0 0 15px;
+}
+
+h2 {
+  margin: 0 0 0 0;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.loginBox {
+  padding: 0 0 20px;
+  margin: 0px;
+  text-align: center;
+}
+
+.loginBox h2 {
+  margin:0 0 0 0;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.loginBox table {
+  margin: 0px auto;
+  text-align: left;
+}
+
+.loginBox table td {
+  padding-bottom: 0.2em;
+}
+
+.loginBox .gaia.le.rem {
+  font-size: 80%;
+}
+
+#alBoxWrap {
+  margin-top: 10px;
+}
+
+.alBox {
+  padding: 5px 10px;
+  margin: 0px;
+}
+
+.alBox h4 {
+  margin: 0px;
+  font-size: 80%;
+}
+
+.errormsg {
+  color: #cc0000
+}
+
+.alert {
+  color: #FF0000
+}
+
+.sites-teaser {
+  margin-top: 2em;
+  padding: .5em;
+  background-color: #ffffee;
+  border: 1px solid #eeee00;
+}
+
+.footer {
+  border-top:1px solid #CCCCCC;
+  margin-top:4em;
+  padding-top:1em;
+  text-align:center;
+}
+
+div.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }
+font.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }
+
+.gaia.le.lbl { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia.le.fpwd { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
+.gaia.le.chusr { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
+.gaia.le.val { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia.le.button { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia.le.rem { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+
+.gaia.captchahtml.desc { font-family: arial, sans-serif; font-size: smaller; } 
+.gaia.captchahtml.cmt { font-family: arial, sans-serif; font-size: smaller; font-style: italic; }
+

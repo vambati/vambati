@@ -1,0 +1,102 @@
+	/* Provide skin for basic Panel elements, ontop of container-core.css */
+
+	/*the basic panel*/
+	#bpanel.yui-panel {
+		border:none;
+		overflow:visible;
+		background-color:transparent;
+	}
+
+	/*the basic panels head element*/
+	#bpanel.yui-panel .hd 
+	{ 
+		padding:0px;
+		overflow:hidden;
+		border:1px solid #aeaeae;
+		border-bottom:none;
+		background-color:#FFF;
+	}
+
+	/*the basic panels heading element*/
+	#bpanel.yui-panel .hd .head_text{
+		direction: ltr; 
+		text-align: left; 
+		font-weight: bold; font-size: 12px; 
+		font-family: arial,sans-serif; 
+	}
+
+	/*the basic panels foot element*/
+	#bpanel.yui-panel .ft 
+	{
+		padding:0px;
+		overflow:hidden;
+		border:1px solid #aeaeae;
+		border-top:none;
+		background-color:#FFF;
+	}
+
+	/*the basic panels foot button element*/
+	#bpanel.yui-panel .ft .button_text
+	{
+		position:absolute;
+		direction: ltr; 
+		text-align: center; 
+		font-weight: bold; 
+		font-size: 12px; 
+		font-family: arial,sans-serif; 
+		width:200px;
+		left:50px;
+		bottom:0px;
+	}
+
+	/*the basic panels shadow element*/
+	#bpanel_c.yui-panel-container.shadow .underlay 
+	{ 
+		position:absolute;
+		left:3px;
+		right:-3px;
+		top:3px;
+		bottom:-3px;
+		background-color:#000;
+		opacity:0.12;
+		filter:alpha(opacity=12);
+	}
+
+	/*the basic panel container close*/
+	#bpanel.yui-panel .container-close 
+	{
+		position:absolute;
+		top:5px;
+		right:6px;
+		width:25px;
+		height:15px;
+		background:url(images/sprite.png) no-repeat 0 -300px;
+		cursor:pointer;
+		overflow:hidden;
+		text-indent:-10000em;
+		text-decoration:none;
+	}
+
+	/*the basic panels knob*/
+	#bpanel.yui-panel .hd .knob 
+	{
+		position:absolute;
+		height: 18px;
+		width: 14px;
+		background-image:url(images/knob.png);
+		background-repeat:no-repeat;
+		position: absolute;
+		left: 40px;
+		top: -9px;
+		z-index: 999;
+	}
+
+	/*basic panels body element*/
+	#bpanel.yui-panel .bd {
+		padding:0px;
+		overflow:hidden;
+		border:1px solid #aeaeae;
+		border-bottom:none;
+		border-top:none;
+		background-color:#FFF;
+	}
