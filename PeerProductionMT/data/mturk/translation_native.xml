@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+  <Overview>
+    <FormattedContent><![CDATA[
+    <script type="text/javascript" src="http://www.google.com/jsapi">
+    </script>
+    <script type="text/javascript">
+
+      // Load the Google Transliteration API
+      google.load("elements", "1", {
+            packages: "transliteration"
+          });
+
+      function onLoad() {
+        var options = {
+          sourceLanguage: 'en', // or google.elements.transliteration.LanguageCode.ENGLISH,
+          destinationLanguage: ['te'], // or [google.elements.transliteration.LanguageCode.TELUGU],
+          shortcutKey: 'ctrl+g',
+          transliterationEnabled: true
+        };
+        // Create an instance on TransliterationControl with the required
+        // options.
+        var control =
+            new google.elements.transliteration.TransliterationControl(options);
+
+        // Enable transliteration in the textfields with the given ids.
+        var ids = [ "edit"];
+        control.makeTransliteratable(ids);
+
+        // Show the transliteration control which can be used to toggle between
+        // English and Hindi.
+        // control.showControl('translControl');
+      }
+      google.setOnLoadCallback(onLoad);
+    </script>
+      <h1 align="center">Translate $src_lang to $tgt_lang </h1>
+      <h3>Instructions</h3>
+	<ul> 
+	<li>Your $tgt_lang translation should be as close as possible to the $src_lang original sentence</li>
+        <li> Any words that you do not understand should be copy pasted to the translation as it is, but do not drop any words</li>
+        <li> You can NOT use 'automatic' online Machine Translation systems like Google or Babblefish to do this task </li>
+	</ul>
+
+      <h3>Evaluation Criteria</h3>
+        <ul>
+          <li>The translation should be as close in meaning as possible to the original sentence</li>
+          <li>Atleast 80% of the words need to be translated for consideration of task completion.When in doubt leave untranslated</li>
+          <li>Wrong choice of translations will be penalized. Junk will be penalized even more</li>
+        </ul>
+    ]]></FormattedContent>
+  </Overview>
+  <Question>
+    <QuestionIdentifier>translate</QuestionIdentifier>
+    <IsRequired>true</IsRequired>
+    <QuestionContent>
+      <FormattedContent><![CDATA[
+      <font size="4" color="darkblue" >Translate the following $src_lang sentence into $tgt_lang: $src </font> 
+      ]]></FormattedContent>
+    </QuestionContent>
+    <AnswerSpecification>
+      <FreeTextAnswer/>
+    </AnswerSpecification>
+  </Question>
+</QuestionForm>

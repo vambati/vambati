@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+
+<project name="Peer Production" default="dist" basedir=".">
+
+	<property name="version" value="1.0" />
+
+	<property name="peer-dir" location="dist/peer-${version}" />
+	<property name="jar-file" value="${peer-dir}/peer-${version}.jar" />
+
+	<path id="compile.classpath">
+		<fileset dir="lib/">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="build" />
+	</target>
+
+
+	<target name="compile" depends="init">
+		<javac source="1.5" target="1.5" srcdir="src" destdir="build" 
+			classpathref="compile.classpath" />
+	</target>
+
+
+	<target name="dist" depends="compile">
+		<mkdir dir="${peer-dir}" />
+
+		<manifestclasspath property="jar.classpath" jarfile="${jar-file}">
+			<classpath refid="compile.classpath" />
+		</manifestclasspath>
+
+		<jar jarfile="${jar-file}" basedir="build">
+			<manifest>
+				<attribute name="Main-Class" value="tcp.P2PServer" />
+				<attribute name="Class-Path" value="${jar.classpath}" />
+			</manifest>
+		</jar>
+	</target>
+
+
+	<target name="clean" description="clean up generted files">
+		<delete dir="build" />
+		<delete dir="dist" />
+	</target>
+
+</project>

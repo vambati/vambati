@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="dateType">
+    <xs:restriction base="xs:dateTime"/>
+  </xs:simpleType>
+
+
+  <xs:complexType name="transReqType">
+    <xs:sequence>
+      <xs:element name="source" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="req_id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="transReqsType">
+    <xs:sequence>
+      <xs:element name="translation_request" minOccurs="1" maxOccurs="unbounded" type="transReqType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="targetsType">
+    <xs:sequence>
+      <xs:element name="target" minOccurs="1" maxOccurs="unbounded" type="targetType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="targetType">
+    <xs:sequence>
+      <xs:element name="sentence" minOccurs="1" maxOccurs="unbounded" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="weight" type="xs:decimal" />
+    <xs:attribute name="description" type="xs:string" />
+  </xs:complexType>
+
+
+  <xs:complexType name="translationType">
+    <xs:sequence>
+      <xs:element name="source" type="xs:string"/>
+      <xs:element name="targets" type="targetsType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="req_id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="translationsType">
+    <xs:sequence>
+      <xs:element name="translation" maxOccurs="unbounded" type="translationType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="spontTranslationsType">
+    <xs:sequence>
+      <xs:element name="spontaneous_translation" maxOccurs="unbounded" type="spontTranslationType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="spontTranslationType">
+    <xs:sequence>
+      <xs:element name="source" type="xs:string"/>
+      <xs:element name="targets" type="targetsType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="spont_id" type="xs:string" use="required"/>
+  </xs:complexType>
+
+
+  <!-- 
+       Format for sending requests for translations from BBN to CMU. Each
+       'translation_request' element represents a separate request, for which the
+       'source' element is the unit (sentence, phrase, etc) that needs to
+       be translated.
+    -->
+  <xs:complexType name="requestType">
+    <xs:sequence>
+      <xs:element name="translation_requests" type="transReqsType"/>
+    </xs:sequence>
+    <xs:attribute name="file_id" type="xs:string" use="required"/>
+    <xs:attribute name="datetime" type="dateType" use="required"/>
+    <xs:attribute name="source_lang" type="xs:string" use="required"/>
+    <xs:attribute name="target_lang" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="request" type="requestType"/>
+
+
+
+  <!--
+      Format for sending a response to BBN's request from CMU to BBN.
+      The 'source' elements are taken from the 'source' elements in the request.
+      The 'target' element is its translation.  Note we can have multiple
+      target elements for the same source element.   
+    -->
+  <xs:complexType name="responseType">
+    <xs:sequence>
+      <xs:element name="translations" type="translationsType"/>
+    </xs:sequence>
+    <xs:attribute name="file_id" type="xs:string" use="required"/>
+    <xs:attribute name="datetime" type="dateType" use="required"/>
+    <xs:attribute name="source_lang" type="xs:string" use="required"/>
+    <xs:attribute name="target_lang" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="response" type="responseType"/>
+
+
+
+  <!--
+      Format for sending an unsolicited set of translatiosn from CMU to BBN.
+      These are translations which the BBN system did not ask for, but which 
+      the CMU system thinks are valuable.
+    -->
+  <xs:complexType name="spontaneousType">
+    <xs:sequence>
+      <xs:element name="spontaneous_translations" type="spontTranslationsType"/>
+    </xs:sequence>
+    <xs:attribute name="file_id" type="xs:string" use="required"/>
+    <xs:attribute name="datetime" type="dateType" use="required"/>
+    <xs:attribute name="source_lang" type="xs:string" use="required"/>
+    <xs:attribute name="target_lang" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="spontaneous" type="spontaneousType"/>
+
+
+
+</xs:schema>

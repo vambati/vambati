@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<request id="123" datetime="2010-03-01T11:42:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bbn.com/Translations C:\project\Speech\translations.xsd">
+	<translation_requests>
+	  <translation_request id="123.1">
+	    <source>word1 word2 wordnےندرھے </source>
+	  </translation_request>
+	  <translation_request id="123.2">
+	    <source> word1 word2 wordn آداب</source>
+	  </translation_request>
+	  <translation_request id="123.3">
+	    <source> word1 word2 wordn </source>
+	  </translation_request>
+	</translation_requests>
+</request>

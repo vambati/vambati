@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/mail-1.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/google-api-translate-java-0.82.jar"/>
+	<classpathentry kind="lib" path="/ActiveLearningforMT/external/meteor.jar"/>
+	<classpathentry kind="lib" path="lib/java-aws-mturk-1.2.2/lib/aws-mturk-wsdl.jar"/>
+	<classpathentry kind="lib" path="lib/java-aws-mturk-1.2.2/lib/aws-mturk-dataschema.jar"/>
+	<classpathentry kind="lib" path="lib/java-aws-mturk-1.2.2/lib/java-aws-mturk.jar"/>
+	<classpathentry kind="lib" path="lib/java-aws-mturk-1.2.2/lib/third-party/commons-lang-2.3/commons-lang-2.3.jar"/>
+	<classpathentry kind="lib" path="lib/java-aws-mturk-1.2.2/lib/third-party/commons-logging-1.0.4/commons-logging.jar"/>
+	<classpathentry kind="lib" path="lib/java-aws-mturk-1.2.2/lib/third-party/opencsv-1.8/opencsv-1.8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<response id="456" datetime="2010-03-01T11:42:00" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <translations>
+    <translation id="123.1">
+      <source>word1 word2 wordnےندرھے </source>
+      <targets>
+	<target> word1 word2 wordnےندرھے </target>
+	<target> word1 word2 wordn </target>
+	<target> word1 word2 wordn </target>
+	<target> word1 word2 wordn </target>
+      </targets>
+    </translation>
+    <translation id="123.2">
+      <source> word1 word2 wordn آداب</source>
+      <targets>
+	<target> word1 word2 wordn </target>
+	<target> word1 word2 wordn </target>
+	<target> word1 word2 wordn </target>
+      </targets>
+    </translation>
+  </translations>
+</response>
