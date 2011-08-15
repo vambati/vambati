@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/MODULES/maxent-2.5.2/maxent-2.5.2/src/java/opennlp"/>
+	<classpathentry kind="lib" path="C:/MODULES/maxent-2.5.2/maxent-2.5.2/lib/trove.jar"/>
+	<classpathentry kind="lib" path="C:/MODULES/maxent-2.5.2/maxent-2.4.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
